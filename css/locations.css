@@ -1,0 +1,48 @@
+/* locations*/
+.new-item {
+  color: #db9423
+ 
+}
+
+.areas {
+  display: flex;
+  flex-direction: column; /* Default to column layout */
+
+}
+
+.areas h2 {
+ margin-left: 20px;
+}
+
+.areas li {
+  margin-left: 40px;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.areas-image {
+  width: 657px; /* or 100% if you want it to be flexible */
+  height: auto; /* Maintains aspect ratio */
+}
+
+/* Media query for screens smaller than 700px */
+@media (max-width: 700px) {
+  .areas-image {
+      width: 100%; /* Adjusts the image to fit the screen width */
+      height: auto; /* Maintains aspect ratio */
+  }
+}
+
+@media screen and (min-width: 1233px) {
+  .areas {
+    flex-direction: row; /* Change to row layout */
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+/* locations */

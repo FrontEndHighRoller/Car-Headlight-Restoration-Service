@@ -1,0 +1,30 @@
+.calculator {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  margin: auto, 0;
+}
+
+.calculator select,
+.calculator button {
+  margin: 0.31rem; /* Add margin between the elements */
+  text-align: center;
+}
+
+.calculator button {
+  width: 21.8rem;
+  height: 3.1rem;
+  border-radius: 3.1rem;
+  color: white;
+  background-color: #db9423;
+  border: none; /* this will remove black default backgroudn color */
+}
+
+.calculator button:hover,
+.calculator button:active {
+  background-color: #db8023;
+}
+
+.calculator h1 {
+  text-align: center;
+}
