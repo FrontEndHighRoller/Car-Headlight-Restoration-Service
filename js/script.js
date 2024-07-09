@@ -1,3 +1,31 @@
+// TOP BANNER CLOSE BUTTON START //
+function countdown() {
+  // Set the end date to July 31, 2024
+  const endDate = new Date('July 31, 2024 23:59:59').getTime();
+
+  const countdownElement = document.getElementById('countdown');
+  const banner = document.querySelector('.top-banner');
+
+  // Update countdown every second
+  const interval = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+
+      // Calculate remaining days
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      countdownElement.textContent = days;
+
+      if (distance < 0) {
+          clearInterval(interval);
+          banner.style.display = 'none'; // Hide the banner when countdown ends
+      }
+  }, 1000); // Update every second (1000 milliseconds)
+}
+
+countdown(); // Start the countdown when the page loads
+// TOP BANNER CLOSE BUTTON END //
+
 // FAQ collapsible START
 
 var coll = document.getElementsByClassName("collapsibles");
