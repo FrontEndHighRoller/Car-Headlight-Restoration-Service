@@ -1,3 +1,28 @@
+
+
+.top-banner {
+  background: #264ed6;
+  color: white;
+  padding: 16px;
+  text-align: center;
+display: none;
+}
+.top-banner-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre-line;
+
+
+}
+
+@media (min-width: 768px) {
+  .top-banner-text {
+      white-space: nowrap; /* Prevent line breaks */
+ 
+  }
+
+}
+
 /* this keeps footer on the bottom*/
 main {
   min-height: calc(100vh - 5.1rem - 4.2rem);
