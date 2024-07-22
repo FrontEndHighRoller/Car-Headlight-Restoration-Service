@@ -19,6 +19,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     emailjs.send(serviceID, templateID, params)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
+            
+            // Track conversion in GA4
+            gtag('event', 'form_submission', {
+                'event_category': 'Contact Form',
+                'event_label': 'Request A Quote',
+                'value': 1
+            });
+
             alert("Your message was sent successfully!");
             document.getElementById('contact-form').reset(); // Clear the form
         })
