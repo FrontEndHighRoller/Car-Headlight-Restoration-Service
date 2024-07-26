@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+h2 {
+  text-transform: uppercase;
+  padding-left: 2.5rem;
+  padding-right: 1.5rem;
+}
+
 /* header finish */
 
 /* Content Header START  */
@@ -63,6 +69,10 @@
   padding: 30px 0;
 }
 
+.special-h2 {
+  padding: 0
+}
+
 .left {
   margin-left: 100px;
 }
@@ -82,11 +92,6 @@
 /* why to choose headlights forever start */
 .welcome {
   padding: 1.25rem 0;
-}
-
-.welcome h2 {
-  padding-left: 2.5rem;
-  padding-right: 1.5rem;
 }
 
 .welcome h1,
@@ -196,9 +201,12 @@
 /* DIY Finish*/
 
 /* FAQ collapsible START */
-
-.faq h2 {
-  padding: 15px 0 15px 45px;
+.faq-h2 {
+background-color: black;
+color: white;
+padding-bottom: 20px;
+margin-bottom: 1px;
+padding-top: 20px;
 }
 
 .collapsibles {
@@ -228,12 +236,185 @@
 
 /* FAQ collapsible END*/
 
-/*    MEDIA QUERTIES - - - - - - -MEDIA QUERIES .............................................................................................................*/
+
+/*TESTIMONIALS START */
+
+.testimonials-h2 {
+  padding-bottom: 20px;
+  padding-top: 40px;
+  font-size: clamp(20px, 2vw, 24px);
+  border-bottom: solid 2px black;
+}
+
+.testimonials {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 3px;
+}
+
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: black;
+}
+
+.image-content,
+.card-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 10px 14px;
+}
+
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay-testimonials {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #db9423;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay-testimonials::before,
+.overlay-testimonials::after{
+  content: "";
+position: absolute;
+right: 0;
+bottom: -40px;
+height: 40px;
+width: 40px;
+background-color: #db9423;
+}
+
+.overlay-testimonials::after {
+  border-radius: 0 25px 0 0;
+  background-color: black;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: black;
+  padding: 3px;
+}
+
+.card-image .card-img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+border: 4px solid #db9423 ;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.stars {
+  color: #FFD700; /* Gold color for stars */
+  margin-bottom: 10px;
+}
+
+.stars i {
+  margin-right: 2px;
+}
+
+.description {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.button-testimonials {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px;
+background-color: #db9423;
+border-radius: 6px;
+margin: 14px;
+cursor: pointer;
+transition: all 0.3s ease ;
+}
+
+.button-testimonials:hover {
+  background-color: #db8023;
+}
+
+.swiper-navBtn {
+  color: #db9423;
+}
+
+.swiper-navBtn:hover {
+  color: #db8023;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 40px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #db9423;
+opacity: 1;
+}
+
+.swiper-pagination-bullet.active {
+  background-color: #db8023;
+}
+
+@media screen and (max-width: 768px) {
+.slide-content {
+  margin: 0 10px;
+}
+
+  .swiper-navBtn {
+    display: none;
+  }
+}
+/* TESTIMONIALS FINISHS */
+
+/*  - - - - - - - MEDIA QUERIES .............................................................................................................*/
 
 /* Media 1355 */
 @media (max-width: 1355px) {
   .benefits {
-    min-width: calc(50% - 10px);
+    min-width: calc(50% - 10px)
   }
   .areas {
     flex-direction: column;
