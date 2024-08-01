@@ -1,7 +1,31 @@
+// MODAL START //
+document.addEventListener('DOMContentLoaded', (event) => {
+  const modal = document.getElementById('modal');
+  const closeBtn = document.querySelector('.close-btn');
+
+  // Show the modal
+  modal.style.display = 'block';
+
+  // When the user clicks on <span> (x), close the modal
+  closeBtn.onclick = function() {
+      modal.style.display = 'none';
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  }
+});
+
+
+// MODAL END //
+
 // TOP BANNER CLOSE BUTTON START //
 function countdown() {
   // Set the end date to July 31, 2024
-  const endDate = new Date('July 31, 2024 23:59:59').getTime();
+  const endDate = new Date('August 31, 2024 23:59:59').getTime();
 
   const countdownElement = document.getElementById('countdown');
   const banner = document.querySelector('.top-banner');
@@ -100,11 +124,33 @@ function calculatePrice() {
     isNaN(locationValue) ||
     isNaN(damagedHeadlightsValue)
   ) {
-    alert("Please select options for all fields."); // You can display an error message
+    alert("Please select options for all fields."); // Display an error message
     return; // Don't calculate the price if any selection is invalid
   }
 
   const totalPrice = modelValue + locationValue + damagedHeadlightsValue;
+  const totalPriceDiscount = Math.ceil(totalPrice - (totalPrice / 100) * 10); // Calculate discounted price and round up
 
   document.getElementById("total-price").textContent = totalPrice;
+  document.getElementById("discounted-price").textContent = totalPriceDiscount;
+
+  // Show the price paragraphs
+  document.getElementById("normal-price").classList.remove("hidden");
+  document.getElementById("discount-price").classList.remove("hidden");
+
+  // Apply slide-in-bounce animation to the discounted price
+  document.getElementById("discount-price").classList.add("slide-in-bounce");
+
+  // Trigger confetti effect
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
 }
+
+
+
+
+
+

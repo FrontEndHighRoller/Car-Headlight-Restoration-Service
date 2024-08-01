@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../css/calculator.css" />
     <link rel="icon" type="image/png" href="../photos/fav-icon.png" />
     <script src="../js/emailjs.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
   </head>
 
   <body>
@@ -123,7 +125,8 @@
 
         <br />
 
-        <p>Total Price: £<span id="total-price">0</span></p>
+        <p id="normal-price" class="hidden">Normal Price: £<span id="total-price" class="strikethrough">0</span></p>
+        <p id="discount-price" class="hidden">Discounted Price Only: £<span id="discounted-price">0</span></p>
       </div>
     </main>
     <footer>&copy Headlights forever. All Rights Reserved.</footer>

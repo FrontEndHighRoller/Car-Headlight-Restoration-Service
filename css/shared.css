@@ -1,12 +1,10 @@
-
-
 .top-banner {
-  background: #264ed6;
+  background: #db9423;
   color: white;
   padding: 16px;
   text-align: center;
-  display: none; /*TO BANNER ACTIVE DELETE THIS LINE */
 }
+
 .top-banner-text {
   font-size: 0.875rem;
   line-height: 1.5;
