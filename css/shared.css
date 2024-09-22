@@ -1,4 +1,5 @@
 .top-banner {
+  display: none; /* "block" if you want to show liner on the top*/
   background: #db9423;
   color: white;
   padding: 16px;
