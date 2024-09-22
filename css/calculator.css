@@ -30,19 +30,19 @@
 }
 
 /* 10% off ofer only */
-.strikethrough {
+/* .strikethrough {
   text-decoration: line-through;
-}
+} */
 
 .hidden {
   display: none;
 }
 
-#discount-price {
+/* #discount-price {
   background-color: red;
     color: white;
     padding: 10px;
-}
+} */
 
 .slide-in-bounce {
   display: inline-block;

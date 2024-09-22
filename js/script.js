@@ -1,53 +1,52 @@
 // MODAL START //
-document.addEventListener('DOMContentLoaded', (event) => {
-  const modal = document.getElementById('modal');
-  const closeBtn = document.querySelector('.close-btn');
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   const modal = document.getElementById('modal');
+//   const closeBtn = document.querySelector('.close-btn');
 
-  // Show the modal
-  modal.style.display = 'block';
+//   // Show the modal
+//   modal.style.display = 'none'; 
 
-  // When the user clicks on <span> (x), close the modal
-  closeBtn.onclick = function() {
-      modal.style.display = 'none';
-  }
+//   // When the user clicks on <span> (x), close the modal
+//   closeBtn.onclick = function() {
+//       modal.style.display = 'none';
+//   }
 
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = 'none';
-      }
-  }
-});
-
-
+//   // When the user clicks anywhere outside of the modal, close it
+//   window.onclick = function(event) {
+//       if (event.target == modal) {
+//           modal.style.display = 'none';
+//       }
+//   }
+// });
 // MODAL END //
 
+
 // TOP BANNER CLOSE BUTTON START //
-function countdown() {
-  // Set the end date to July 31, 2024
-  const endDate = new Date('August 31, 2024 23:59:59').getTime();
+// function countdown() {
+//   // Set the end date to July 31, 2024
+//   const endDate = new Date('August 31, 2024 23:59:59').getTime();
 
-  const countdownElement = document.getElementById('countdown');
-  const banner = document.querySelector('.top-banner');
+//   const countdownElement = document.getElementById('countdown');
+//   const banner = document.querySelector('.top-banner');
 
-  // Update countdown every second
-  const interval = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = endDate - now;
+//   // Update countdown every second
+//   const interval = setInterval(function() {
+//       const now = new Date().getTime();
+//       const distance = endDate - now;
 
-      // Calculate remaining days
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//       // Calculate remaining days
+//       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-      countdownElement.textContent = days;
+//       countdownElement.textContent = days;
 
-      if (distance < 0) {
-          clearInterval(interval);
-          banner.style.display = 'none'; // Hide the banner when countdown ends
-      }
-  }, 1000); // Update every second (1000 milliseconds)
-}
+//       if (distance < 0) {
+//           clearInterval(interval);
+//           banner.style.display = 'none'; 
+//       }
+//   }, 1000);
+// }
 
-countdown(); // Start the countdown when the page loads
+// countdown(); 
 // TOP BANNER CLOSE BUTTON END //
 
 // FAQ collapsible START
@@ -115,9 +114,7 @@ var swiper = new Swiper(".slide-content", {
 function calculatePrice() {
   const modelValue = parseInt(document.getElementById("model").value);
   const locationValue = parseInt(document.getElementById("location").value);
-  const damagedHeadlightsValue = parseInt(
-    document.getElementById("damaged-headlights").value
-  );
+  const damagedHeadlightsValue = parseInt(document.getElementById("damaged-headlights").value);
 
   if (
     isNaN(modelValue) ||
@@ -129,17 +126,17 @@ function calculatePrice() {
   }
 
   const totalPrice = modelValue + locationValue + damagedHeadlightsValue;
-  const totalPriceDiscount = Math.ceil(totalPrice - (totalPrice / 100) * 10); // Calculate discounted price and round up
+  // const totalPriceDiscount = Math.ceil(totalPrice - (totalPrice / 100) * 10); // Calculate discounted price and round up
 
   document.getElementById("total-price").textContent = totalPrice;
-  document.getElementById("discounted-price").textContent = totalPriceDiscount;
+  // document.getElementById("discounted-price").textContent = totalPriceDiscount;
 
   // Show the price paragraphs
   document.getElementById("normal-price").classList.remove("hidden");
-  document.getElementById("discount-price").classList.remove("hidden");
+  // document.getElementById("discount-price").classList.remove("hidden");
 
   // Apply slide-in-bounce animation to the discounted price
-  document.getElementById("discount-price").classList.add("slide-in-bounce");
+  // document.getElementById("discount-price").classList.add("slide-in-bounce");
 
   // Trigger confetti effect
   confetti({
